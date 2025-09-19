@@ -66,18 +66,18 @@ export const CartPage: React.FC = () => {
 
   if (items.length === 0) {
     return (
-      <div className="min-h-screen bg-background py-20">
-        <div className="container mx-auto px-4">
+      <div className="min-h-screen bg-background py-8 sm:py-12 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mx-auto text-center">
-            <ShoppingBag className="h-24 w-24 mx-auto text-muted-foreground mb-6" />
-            <h1 className="text-4xl font-bold mb-4 text-foreground">سلتك فارغة</h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <ShoppingBag className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 mx-auto text-muted-foreground mb-4 sm:mb-6" />
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-foreground">سلتك فارغة</h1>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 px-4">
               يبدو أنك لم تضف أي مكملات غذائية إلى سلتك بعد.
             </p>
             <Button 
               asChild
               size="lg"
-              className="bg-gradient-button hover:shadow-glow transition-all duration-300 px-8 py-6 h-auto text-lg"
+              className="bg-gradient-button hover:shadow-glow transition-all duration-300 px-6 sm:px-8 py-4 sm:py-6 h-auto text-base sm:text-lg"
             >
               <Link to="/products">
                 ابدأ التسوق
@@ -90,42 +90,47 @@ export const CartPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8 text-foreground text-center">
+    <div className="min-h-screen bg-background py-8 sm:py-12 md:py-20">
+      <div className="container mx-auto px-4 sm:px-6">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-foreground text-center">
           <span className="text-fitness-blue">سلة</span> التسوق
         </h1>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Cart Items */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-2 space-y-4 sm:space-y-6">
             {items.map((item) => (
               <Card key={item.id} className="bg-card border-border">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-20 h-20 object-cover rounded-lg"
-                    />
-                    
-                    <div className="flex-1">
-                      <h3 className="font-bold text-lg text-foreground">{item.name}</h3>
-                      <p className="text-muted-foreground">{item.category}</p>
-                      <p className="text-fitness-blue font-bold">{item.price} جنيه</p>
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    {/* Product Image */}
+                    <div className="flex-shrink-0 mx-auto sm:mx-0">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-lg"
+                      />
                     </div>
                     
-                    <div className="flex items-center space-x-3">
+                    {/* Product Info */}
+                    <div className="flex-1 text-center sm:text-right">
+                      <h3 className="font-bold text-base sm:text-lg text-foreground mb-1">{item.name}</h3>
+                      <p className="text-sm sm:text-base text-muted-foreground mb-1">{item.category}</p>
+                      <p className="text-fitness-blue font-bold text-sm sm:text-base">{item.price} جنيه</p>
+                    </div>
+                    
+                    {/* Quantity Controls */}
+                    <div className="flex items-center justify-center space-x-3">
                       <Button
                         variant="outline"
                         size="icon"
                         onClick={() => handleQuantityChange(item.id, item.quantity - 1)}
-                        className="border-border hover:bg-secondary"
+                        className="border-border hover:bg-secondary h-8 w-8 sm:h-10 sm:w-10"
                       >
-                        <Minus className="h-4 w-4" />
+                        <Minus className="h-3 w-3 sm:h-4 sm:w-4" />
                       </Button>
                       
-                      <span className="text-lg font-semibold min-w-[2rem] text-center text-foreground">
+                      <span className="text-base sm:text-lg font-semibold min-w-[2rem] text-center text-foreground">
                         {item.quantity}
                       </span>
                       
@@ -133,23 +138,24 @@ export const CartPage: React.FC = () => {
                         variant="outline"
                         size="icon"
                         onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
-                        className="border-border hover:bg-secondary"
+                        className="border-border hover:bg-secondary h-8 w-8 sm:h-10 sm:w-10"
                       >
-                        <Plus className="h-4 w-4" />
+                        <Plus className="h-3 w-3 sm:h-4 sm:w-4" />
                       </Button>
                     </div>
                     
-                    <div className="text-right">
-                      <p className="text-lg font-bold text-foreground">
+                    {/* Price and Remove */}
+                    <div className="text-center sm:text-right">
+                      <p className="text-base sm:text-lg font-bold text-foreground mb-2">
                         {(item.price * item.quantity).toFixed(2)} جنيه
                       </p>
                       <Button
                         variant="ghost"
                         size="sm"
                         onClick={() => handleRemoveItem(item.id, item.name)}
-                        className="text-destructive hover:text-destructive hover:bg-destructive/10 mt-2"
+                        className="text-destructive hover:text-destructive hover:bg-destructive/10 text-xs sm:text-sm"
                       >
-                        <Trash2 className="h-4 w-4 ml-1" />
+                        <Trash2 className="h-3 w-3 sm:h-4 sm:w-4 ml-1" />
                         إزالة
                       </Button>
                     </div>
@@ -160,23 +166,23 @@ export const CartPage: React.FC = () => {
           </div>
 
           {/* Order Summary & Checkout */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {/* Order Summary */}
             <Card className="bg-gradient-card border-border">
-              <CardHeader>
-                <CardTitle className="text-foreground">ملخص الطلب</CardTitle>
+              <CardHeader className="pb-3 sm:pb-6">
+                <CardTitle className="text-base sm:text-lg text-foreground">ملخص الطلب</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-3 sm:space-y-4">
                 {items.map((item) => (
-                  <div key={item.id} className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">{item.name} x{item.quantity}</span>
-                    <span className="text-foreground">{(item.price * item.quantity).toFixed(2)} جنيه</span>
+                  <div key={item.id} className="flex justify-between text-xs sm:text-sm">
+                    <span className="text-muted-foreground truncate max-w-[60%]">{item.name} x{item.quantity}</span>
+                    <span className="text-foreground font-medium">{(item.price * item.quantity).toFixed(2)} جنيه</span>
                   </div>
                 ))}
                 
                 <Separator />
                 
-                <div className="flex justify-between text-lg font-bold">
+                <div className="flex justify-between text-base sm:text-lg font-bold">
                   <span className="text-foreground">الإجمالي:</span>
                   <span className="text-fitness-blue">{getTotalPrice().toFixed(2)} جنيه</span>
                 </div>
@@ -185,40 +191,41 @@ export const CartPage: React.FC = () => {
 
             {/* Customer Information */}
             <Card className="bg-gradient-card border-border">
-              <CardHeader>
-                <CardTitle className="text-foreground">معلومات العميل</CardTitle>
+              <CardHeader className="pb-3 sm:pb-6">
+                <CardTitle className="text-base sm:text-lg text-foreground">معلومات العميل</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-3 sm:space-y-4">
                 <div>
-                  <Label htmlFor="name" className="text-foreground">الاسم الكامل *</Label>
+                  <Label htmlFor="name" className="text-sm sm:text-base text-foreground">الاسم الكامل *</Label>
                   <Input
                     id="name"
                     value={customerInfo.name}
                     onChange={(e) => setCustomerInfo(prev => ({ ...prev, name: e.target.value }))}
                     placeholder="أدخل اسمك الكامل"
-                    className="bg-background border-border"
+                    className="bg-background border-border text-sm sm:text-base h-10 sm:h-11"
                   />
                 </div>
                 
                 <div>
-                  <Label htmlFor="phone" className="text-foreground">رقم الهاتف *</Label>
+                  <Label htmlFor="phone" className="text-sm sm:text-base text-foreground">رقم الهاتف *</Label>
                   <Input
                     id="phone"
+                    type="tel"
                     value={customerInfo.phone}
                     onChange={(e) => setCustomerInfo(prev => ({ ...prev, phone: e.target.value }))}
                     placeholder="أدخل رقم هاتفك"
-                    className="bg-background border-border"
+                    className="bg-background border-border text-sm sm:text-base h-10 sm:h-11"
                   />
                 </div>
                 
                 <div>
-                  <Label htmlFor="address" className="text-foreground">عنوان التوصيل *</Label>
+                  <Label htmlFor="address" className="text-sm sm:text-base text-foreground">عنوان التوصيل *</Label>
                   <Input
                     id="address"
                     value={customerInfo.address}
                     onChange={(e) => setCustomerInfo(prev => ({ ...prev, address: e.target.value }))}
                     placeholder="أدخل عنوان التوصيل"
-                    className="bg-background border-border"
+                    className="bg-background border-border text-sm sm:text-base h-10 sm:h-11"
                   />
                 </div>
               </CardContent>
@@ -228,13 +235,13 @@ export const CartPage: React.FC = () => {
             <Button
               onClick={handleCheckout}
               size="lg"
-              className="w-full bg-gradient-button hover:shadow-glow transition-all duration-300 text-lg py-6 h-auto"
+              className="w-full bg-gradient-button hover:shadow-glow transition-all duration-300 text-sm sm:text-lg py-4 sm:py-6 h-auto"
             >
-              <MessageCircle className="ml-2 h-5 w-5" />
+              <MessageCircle className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               الدفع عبر الواتساب
             </Button>
 
-            <p className="text-sm text-muted-foreground text-center">
+            <p className="text-xs sm:text-sm text-muted-foreground text-center px-2">
               سيتم تحويلك إلى تطبيق الواتساب لإرسال الطلب والتأكيد.
             </p>
           </div>
