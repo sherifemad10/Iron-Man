@@ -81,7 +81,7 @@ export const HomePage: React.FC = () => {
               </CardContent>
             </Card>
             
-            <Card className="text-center bg-gradient-card border-border hover:shadow-glow transition-all duration-300">
+            <Card className="text-center bg-gradient-card border-border hover:shadow-glow transition-all duration-300 w-full lg:w-auto">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-fitness-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="h-8 w-8 text-fitness-blue" />
