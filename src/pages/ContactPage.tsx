@@ -6,7 +6,7 @@ import { MessageCircle, Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 export const ContactPage: React.FC = () => {
   const handleWhatsAppContact = () => {
     const message = "مرحباً! لدي سؤال حول مكملاتكم الغذائية. هل يمكنكم مساعدتي؟";
-    const whatsappUrl = `https://wa.me/201553423925?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/201030251505?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 

@@ -1,11 +1,11 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { ShoppingCart, Eye } from 'lucide-react';
-import { Product, useCart } from '@/hooks/useCart';
-import { useToast } from '@/hooks/use-toast';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ShoppingCart, Eye } from "lucide-react";
+import { Product, useCart } from "@/hooks/useCart";
+import { useToast } from "@/hooks/use-toast";
 
 interface ProductCardProps {
   product: Product;
@@ -26,7 +26,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   return (
     <Card className="group bg-gradient-card shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 border-border cursor-pointer">
-      <CardContent className="p-0" onClick={() => navigate(`/product/${product.id}`)}>
+      <CardContent
+        className="p-0"
+        onClick={() => navigate(`/product/${product.id}`)}
+      >
         <div className="relative overflow-hidden rounded-t-lg">
           <img
             src={product.image}
@@ -44,7 +47,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <Eye className="h-4 w-4" />
           </Button>
         </div>
-        
+
         <div className="p-6">
           <h3 className="font-bold text-center text-lg text-foreground mb-2 line-clamp-2">
             {product.name}
@@ -57,7 +60,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </p>
         </div>
       </CardContent>
-      
+
       <CardFooter className="p-6 pt-0">
         <Button
           onClick={handleAddToCart}

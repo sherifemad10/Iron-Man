@@ -48,7 +48,7 @@ export const CartPage: React.FC = () => {
 
     const message = `🛍️ طلب جديد\n\n👤 الاسم: ${customerInfo.name}\n📱 الهاتف: ${customerInfo.phone}\n📍 العنوان: ${customerInfo.address}\n\n📦 تفاصيل الطلب:\n${orderDetails}\n\n💰 الإجمالي: ${getTotalPrice()} جنيه\n\n✅ برجاء تأكيد الطلب.`;
 
-    const phoneNumber = "201553423925"; 
+    const phoneNumber = "201030251505"; 
     const encodedMessage = encodeURIComponent(message);
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;

@@ -1,11 +1,11 @@
-import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ShoppingCart, ArrowRight } from 'lucide-react';
-import { products } from '@/data/products';
-import { useCart } from '@/hooks/useCart';
-import { useToast } from '@/hooks/use-toast';
+import React from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ShoppingCart, ArrowRight } from "lucide-react";
+import { products } from "@/data/products";
+import { useCart } from "@/hooks/useCart";
+import { useToast } from "@/hooks/use-toast";
 
 export const ProductDetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -13,14 +13,16 @@ export const ProductDetailsPage: React.FC = () => {
   const { addItem } = useCart();
   const { toast } = useToast();
 
-  const product = products.find(p => p.id === id);
+  const product = products.find((p) => p.id === id);
 
   if (!product) {
     return (
       <div className="min-h-screen bg-background py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-2xl font-bold text-foreground mb-4">المنتج غير موجود</h1>
-          <Button onClick={() => navigate('/products')} variant="outline">
+          <h1 className="text-2xl font-bold text-foreground mb-4">
+            المنتج غير موجود
+          </h1>
+          <Button onClick={() => navigate("/products")} variant="outline">
             <ArrowRight className="ml-2 h-4 w-4" />
             العودة للمنتجات
           </Button>
@@ -41,9 +43,9 @@ export const ProductDetailsPage: React.FC = () => {
     <div className="min-h-screen bg-background py-20">
       <div className="container mx-auto px-4">
         {/* Back Button */}
-        <Button 
-          onClick={() => navigate('/products')} 
-          variant="outline" 
+        <Button
+          onClick={() => navigate("/products")}
+          variant="outline"
           className="mb-8 border-border hover:bg-secondary"
         >
           <ArrowRight className="ml-2 h-4 w-4" />
@@ -72,19 +74,23 @@ export const ProductDetailsPage: React.FC = () => {
                 {product.name}
               </h1>
               <p className="text-4xl font-bold text-fitness-blue mb-6">
-                 {product.price} جنيه
+                {product.price} جنيه
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold mb-4 text-foreground">الوصف</h2>
+              <h2 className="text-xl font-semibold mb-4 text-foreground">
+                الوصف
+              </h2>
               <p className="text-muted-foreground leading-relaxed text-lg">
                 {product.description}
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold mb-4 text-foreground">الفوائد الرئيسية</h2>
+              <h2 className="text-xl font-semibold mb-4 text-foreground">
+                الفوائد الرئيسية
+              </h2>
               <ul className="space-y-3 text-muted-foreground">
                 {product.benfite.map((item, index) => (
                   <li key={index} className="flex items-start">
@@ -96,7 +102,9 @@ export const ProductDetailsPage: React.FC = () => {
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold mb-4 text-foreground">طريقة الاستخدام</h2>
+              <h2 className="text-xl font-semibold mb-4 text-foreground">
+                طريقة الاستخدام
+              </h2>
               <p className="text-muted-foreground leading-relaxed">
                 {product.usage}
               </p>
