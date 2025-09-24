@@ -39,4 +39,8 @@ export { default as HulkMass} from '@/assets/hulkMasssmall.jpg';
 export { default as DragonCreaForce} from '@/assets/dragonForce.jpg';
 export { default as SkullfireCreatine} from '@/assets/skullfire.jpg';
 export { default as NikeGymClubBag} from '@/assets/bag.jpg';
+export { default as ResistanceBand} from '@/assets/strap.jpg';
+export { default as JovogenBrace} from '@/assets/brace.jpg';
+export { default as SpeedRope} from '@/assets/speedRope.jpg';
+export { default as HandGrip} from '@/assets/verious.jpg';
 
