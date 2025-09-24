@@ -13,7 +13,7 @@ export { default as NovogenCarb} from '@/assets/novogenCarb.jpg';
 export { default as NovogenMass} from '@/assets/novogenMass.jpg';
 export { default as RedrexMass} from '@/assets/bigMass.jpg';
 export { default as RedrexAmino} from '@/assets/RedRexBeef.jpg';
-// export { default as RedrexCarb} from '@/assets/RedRexCarb.jpg';
+export { default as RedrexCarb} from '@/assets/RedrexCarb.jpg';
 export { default as TractorCreatine} from '@/assets/tractor.jpg';
 export { default as TractorCreatine80} from '@/assets/tractor80.jpg';
 export { default as TractorCreatine160} from '@/assets/tractor160.jpg';
@@ -36,4 +36,7 @@ export { default as UltimateFuriuxMassGainer} from '@/assets/furiuxMass.jpg';
 export { default as FuriuxMass} from '@/assets/furiuxMass2.jpg';
 export { default as UpiCarboteinMass} from '@/assets/UPICarbotein.jpg';
 export { default as HulkMass} from '@/assets/hulkMasssmall.jpg';
+export { default as DragonCreaForce} from '@/assets/dragonForce.jpg';
+export { default as SkullfireCreatine} from '@/assets/skullfire.jpg';
+export { default as NikeGymClubBag} from '@/assets/bag.jpg';
 

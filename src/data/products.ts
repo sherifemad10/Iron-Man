@@ -38,6 +38,10 @@ import {
   FuriuxMass,
   UpiCarboteinMass,
   HulkMass,
+  DragonCreaForce,
+  SkullfireCreatine,
+  RedrexCarb,
+  NikeGymClubBag,
 } from "../components";
 
 export const products: Product[] = [
@@ -317,7 +321,7 @@ export const products: Product[] = [
   {
     id: "16",
     name: "كرياتين تراكتور 40 جرعة (Tractor Creatine)",
-    price: "450 - 700",
+    price: "450",
     image: TractorCreatine,
     category: "كرياتين",
     description:
@@ -336,7 +340,7 @@ export const products: Product[] = [
   {
     id: "17",
     name: "كرياتين تراكتور 80 جرعة (Tractor Creatine)",
-    price: "750 - 1100",
+    price: "650",
     image: TractorCreatine80,
     category: "كرياتين",
     description:
@@ -355,7 +359,7 @@ export const products: Product[] = [
   {
     id: "18",
     name: "كرياتين تراكتور 160 جرعة (Tractor Creatine)",
-    price: "1400 - 1900",
+    price: "950",
     image: TractorCreatine160,
     category: "كرياتين",
     description:
@@ -374,7 +378,7 @@ export const products: Product[] = [
   {
     id: "19",
     name: "سترولين تراكتور (TRACTOR Citrulline)",
-    price: "950 - 1250",
+    price: "550",
     image: TractorCitrulline40,
     category: "أداء رياضي",
     description:
@@ -392,7 +396,7 @@ export const products: Product[] = [
   {
     id: "20",
     name: "كريا باور 30 و50 و80 جرعة",
-    price: "450 - 1350",
+    price: "1250 - 550",
     category: "مكملات",
     image: CreaPower,
     description:
@@ -410,7 +414,7 @@ export const products: Product[] = [
   {
     id: "21",
     name: "Pure Ganic Creatine Monohydrate 100 - 30 - 16",
-    price: "950 - 1250",
+    price: "1000 - 700",
     image: PureGanicCreatine,
     category: "قوة وعضلات",
     description:
@@ -428,7 +432,7 @@ export const products: Product[] = [
   {
     id: "22",
     name: "هالك كرياتين مونوهيدرات",
-    price: "850 - 1150",
+    price: "750",
     image: HulkCreatine,
     category: "قوة وعضلات",
     description:
@@ -731,6 +735,86 @@ export const products: Product[] = [
     usage:
       "تناول سكوب واحد مع 300-400 مل ماء أو حليب بعد التمرين أو بين الوجبات. يمكن استخدام 1-2 جرعات يوميًا حسب احتياجك. العبوة تحتوي على 50 سكوب.",
   },
+  {
+  id: '38',
+  name: 'Dragon Crea Force Creatine',
+  price: '500 - 1400',
+  image: DragonCreaForce,
+  category: 'الكرياتين',
+  description:
+    'Dragon Crea Force Creatine مكمل غذائي يحتوي على كرياتين مونوهيدرات نقي 100% من نوع Creapure® الألماني، مصمم لدعم الرياضيين خلال فترات التضخيم أو التنشيف، مع تحسين الأداء والقوة العضلية.',
+  benfite: [
+    'زيادة القوة العضلية وتحسين القدرة على التحمل أثناء التمارين.',
+    'يساعد على زيادة الكتلة العضلية النظيفة.',
+    'يدعم الاستشفاء العضلي بعد التمرين ويقلل من الإجهاد.',
+    'يحتوي على كرياتين مونوهيدرات نقي 100% من نوع Creapure® الألماني.',
+    'مناسب لفترات التضخيم العضلي وكذلك التنشيف.',
+    'متوفر بأحجام متعددة لتناسب احتياجات الرياضيين.'
+  ],
+  usage:
+    'يُنصح بتناول 3-5 جرام يوميًا مع الماء أو العصير. يمكن تناوله قبل أو بعد التمرين. متوفر بأحجام: 40 جم، 83 جم، 133 جم، 166 جم.'
+},
+{
+  id: '39',
+  name: 'Skullfire Creatine',
+  price: '600',
+  image: SkullfireCreatine,
+  category: 'الكرياتين',
+  description:
+    'Skullfire Creatine مكمل غذائي غير منكه يحتوي على مركب كرياتين نقي 100%، مصمم لدعم الأداء الرياضي وزيادة الكتلة العضلية والتحمل.',
+  benfite: [
+    'زيادة القدرة البدنية والقوة أثناء التمارين.',
+    'يساعد على زيادة كتلة العضلات بشكل صحي.',
+    'يعزز التحمل العضلي أثناء التدريب المكثف.',
+    'يسرع عملية استشفاء العضلات بعد التمارين.',
+    'يساعد على تأخير الشعور بالتعب والإرهاق.',
+    'مصنوع من كرياتين نقي 100% (Creatine Complex).'
+  ],
+  usage:
+    'تناول 3-5 جرام يوميًا مع الماء أو العصير، ويفضل قبل أو بعد التمرين. يتكون من الأحماض الأمينية (جلايسين، أرجينين، ميثيونين) التي تتحول إلى فوسفات الكرياتين وتخزن في العضلات كمصدر للطاقة.'
+},
+{
+  id: '40',
+  name: 'RedRex Creatine Monohydrate - Big Ramy Labs',
+  price: '1000',
+  image: RedrexCarb,
+  category: 'الكرياتين',
+  description:
+    'كرياتين RedRex Creatine Monohydrate من Big Ramy Labs هو مكمل غذائي مطحون ناعم (Micronized) لسهولة الذوبان والامتصاص. يحتوي على 100% كرياتين مونوهيدرات نقي بدون إضافات، ويعد خيارًا مثاليًا لدعم القوة والأداء الرياضي.',
+  benfite: [
+    'زيادة القوة والطاقة في التمارين عالية الشدة.',
+    'تحسين التحمل البدني والأداء الرياضي.',
+    'المساعدة في زيادة الكتلة العضلية.',
+    'تسريع الاستشفاء بعد التمارين.',
+    'مطحون ناعم (Micronized) لسهولة الذوبان.'
+  ],
+  usage:
+    'تناول 1 سكوب (5 جم) يوميًا مع الماء أو العصير، ويفضل قبل أو بعد التمرين. العبوة تحتوي على 300 جم تقريبًا (60 حصة).',
+  brand:
+    'Big Ramy Labs / RED REX – علامة تجارية مصرية مرتبطة بالبطل ممدوح السبيعي (Big Ramy)، متخصصة في إنتاج المكملات الغذائية مثل البروتينات، الكرياتين، BCAA، EAA، Pre-workout، وMass Gainers.'
+},
+{
+  id: '41',
+  name: 'Nike Gym Club Bag',
+  price: '180',
+  image: NikeGymClubBag,
+  category: 'اكسسوارات',
+  description:
+    'حقيبة Nike Gym Club Bag هي حقيبة رياضية أنيقة وعملية، مثالية لحمل أدواتك الرياضية والملابس أثناء التمرين أو السفر. مصنوعة من خامات متينة وخفيفة الوزن مع مساحة واسعة لتنظيم أغراضك بسهولة.',
+  benfite: [
+    'تصميم أنيق وعصري يحمل شعار Nike المميز.',
+    'خامة متينة وخفيفة الوزن تدوم طويلًا.',
+    'مساحة واسعة تكفي للملابس، الأحذية، والإكسسوارات.',
+    'أحزمة يد مريحة مع حزام كتف قابل للتعديل.',
+    'جيب رئيسي بسحّاب مع جيوب إضافية للتخزين المنظم.'
+  ],
+  usage:
+    'مناسبة للاستخدام اليومي في الجيم، الرحلات القصيرة أو السفر. تُحمل باليد أو على الكتف حسب راحتك.'
+}
+
+
+
+
 ];
 
 export const featuredProducts = products.slice(0, 4);
