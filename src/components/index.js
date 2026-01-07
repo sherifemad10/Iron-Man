@@ -43,4 +43,5 @@ export { default as ResistanceBand} from '@/assets/strap.jpg';
 export { default as JovogenBrace} from '@/assets/brace.jpg';
 export { default as SpeedRope} from '@/assets/speedRope.jpg';
 export { default as HandGrip} from '@/assets/verious.jpg';
+export { default as R1} from '@/assets/R1.jpeg';
 
