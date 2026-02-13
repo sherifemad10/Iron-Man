@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap, Shield, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroImage from '@/assets/ironMan.jpeg';
+import heroImage from '@/assets/logo2.jpeg';
 // import heroImage from '@/assets/hero-supplement.png';
 
 
