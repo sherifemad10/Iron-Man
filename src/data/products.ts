@@ -68,6 +68,8 @@ import {
   gragonPharma,
   dragonpharma100,
   dragonpharma200,
+  Anabolic,
+  AminoV,
 } from "../components";
 
 export const products: Product[] = [
@@ -1505,7 +1507,65 @@ export const products: Product[] = [
       "استشر الطبيب أو أخصائي التغذية قبل الاستخدام، خاصة إذا كنت تعاني من حالات صحية موجودة مسبقًا.",
     availableSizes: [{ size: "600 جرام", servings: 200, price: 950 }],
     flavors: ["Unflavored"],
-  }
+  },
+  {
+  id: "68",
+  name: "Kevin Levrone Anabolic Creatine Monohydrate",
+  price: "1200",
+  image: Anabolic,
+  category: "مكملات غذائية",
+  description:
+    "كرياتين مونوهيدرات عالي النقاء من سلسلة Kevin Levrone Signature Series، مصمم لتعزيز القوة البدنية، زيادة الكتلة العضلية، وتحسين الأداء الرياضي.",
+  benfite: [
+    "زيادة القوة البدنية وتحسين الأداء في التمارين عالية الكثافة.",
+    "دعم نمو الكتلة العضلية وزيادة حجم العضلات.",
+    "تقليل التعب وزيادة التحمل اللاهوائي.",
+    "سريع الامتصاص وسهل الذوبان في الماء.",
+  ],
+  usage:
+    "امزج سكوب واحد (5 جم) مع 150-250 مل من الماء، ويفضل تناوله بعد التمرين أو في أي وقت خلال اليوم.",
+  nutrition: {
+    servings: 60,
+    weight: "300 جرام",
+    dosePerServing: "5 جرام",
+  },
+  warning:
+    "استشر الطبيب أو أخصائي التغذية قبل الاستخدام، خاصة إذا كنت تعاني من مشاكل صحية أو أمراض في الكلى.",
+  availableSizes: [
+    { size: "300 جرام", servings: 60, price: 1200 },
+    { size: "600 جرام", servings: 120, price: 2000 }
+  ],
+  flavors: ["Unflavored"],
+},
+{
+  id: "69",
+  name: "Vertex Nutrition Amino-V",
+  price: "1200",
+  image: AminoV,
+  category: "مكملات غذائية",
+  description:
+    "أقراص أحماض أمينية متكاملة من Vertex Nutrition، تحتوي على مزيج من البروتين، الكرياتين، والأحماض الأمينية الأساسية لدعم بناء العضلات وتحسين الأداء الرياضي.",
+  benfite: [
+    "دعم بناء العضلات وتوفير الأحماض الأمينية الأساسية.",
+    "تسريع الاستشفاء العضلي وتقليل آلام ما بعد التمرين.",
+    "زيادة القوة والتحمل بفضل الكرياتين.",
+    "تقليل الهدم العضلي خلال فترات التدريب المكثف.",
+  ],
+  usage:
+    "تناول 5-6 أقراص يوميًا، يمكن تناولها قبل التمرين أو بعده أو تقسيمها على مدار اليوم حسب احتياجك.",
+  nutrition: {
+    servings: 50,
+    weight: "300 قرص",
+    dosePerServing: "6 أقراص",
+  },
+  warning:
+    "استشر الطبيب قبل الاستخدام إذا كنت تعاني من مشاكل في الكبد أو الكلى. اشرب كمية كافية من الماء. غير مناسب لمن هم دون 18 عامًا أو أثناء الحمل والرضاعة.",
+  availableSizes: [
+    { size: "300 قرص", servings: 50, price: 1200 }
+  ],
+  flavors: ["Unflavored"],
+},
+
 ];
 
-export const featuredProducts = products.slice(0, 4);
+export const featuredProducts = products.slice(-4);
